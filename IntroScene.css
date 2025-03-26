@@ -1,0 +1,24 @@
+
+.background-misty {
+  background: linear-gradient(to bottom, #0f0f1c, #1a1a2f);
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+}
+
+.mist {
+  position: absolute;
+  inset: 0;
+  background-image: url('/mist.png'); /* You can add a fog image here */
+  background-size: cover;
+  background-repeat: repeat;
+  opacity: 0.15;
+  animation: drift 60s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes drift {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
